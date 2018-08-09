@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Hello</title>
+</head>
+<body>
+	<div th:text="${msg}"></div>
+	<div th:each="helloDto : ${helloDtoList}">
+		<span th:style="|font-size: ${helloDto.getFontSize()}px|" th:text="${helloDto.getWord()}"></span>
+	</div>
+</body>
+</html>
